@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistant Panel</title>
+  <style>
+    iframe {
+      height: 900px;
+      resize: both;
+    }
+
+    #panel {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    #panel li button {
+      float: left;
+    }
+
+    #panel li button {
+      display: block;
+      color: white;
+      background-color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    #panel li button:hover:not(.active) {
+      background-color: lightblue;
+      color: #111;
+    }
+
+    .active {
+      background-color: #4CAF50;
+    }
+
+    .prof {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div align="center" id="title">
+    <h1>HOSPITAL</h1>
+  </div>
+  <ul id="panel">
+    <li><button data-value="addDoctor.html">ADD DOCTOR</button></li>
+    <li><button data-value="addPatient.html">ADD PATIENT</button></li>
+    <li><button data-value="addMedicine.html">ADD MEDICINE</button></li>
+    <li><button data-value="getDoctor.html">VIEW DOCTORS</button></li>
+    <li><button data-value="getPatients.html">VIEW PATIENTS</button></li>
+    <li><button data-value="getMedicine.html">MEDICINE STORE</button></li>
+    <li><button data-value="discharge.html">DISCHARGE</button></li>
+    <li class="prof 1"><button>ABOUT US</button></li>
+    <li class="prof 2">
+      <form method="post" action="/logout.html">
+        <button type="submit">LOGOUT</button>
+      </form>
+    </li>
+  </ul>
+  <br>
+  <div id="frame"></div>
+  <script src="index.js"></script>
+</body>
+</html>
